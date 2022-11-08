@@ -18,6 +18,7 @@
 		1E5FAC0D287D563A000C20D9 /* MiniCookpadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5FAC0C287D563A000C20D9 /* MiniCookpadTests.swift */; };
 		1E5FAC17287D563A000C20D9 /* MiniCookpadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5FAC16287D563A000C20D9 /* MiniCookpadUITests.swift */; };
 		1E5FAC19287D563A000C20D9 /* MiniCookpadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5FAC18287D563A000C20D9 /* MiniCookpadUITestsLaunchTests.swift */; };
+		1ECD4F53287FF2130090630E /* RecipeListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD4F52287FF2130090630E /* RecipeListRow.swift */; };
 		1EC972B9289106C400985624 /* Hashtag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC972B8289106C400985624 /* Hashtag.swift */; };
 		1EE1A38F287EBA83005C11AA /* StubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A38E287EBA83005C11AA /* StubAPIClient.swift */; };
 		1EE1A391287EBA9E005C11AA /* FixtureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A390287EBA9E005C11AA /* FixtureLoader.swift */; };
@@ -72,6 +73,7 @@
 		1E5FAC12287D563A000C20D9 /* MiniCookpadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniCookpadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5FAC16287D563A000C20D9 /* MiniCookpadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCookpadUITests.swift; sourceTree = "<group>"; };
 		1E5FAC18287D563A000C20D9 /* MiniCookpadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCookpadUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1ECD4F52287FF2130090630E /* RecipeListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListRow.swift; sourceTree = "<group>"; };
 		1EC972B8289106C400985624 /* Hashtag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashtag.swift; sourceTree = "<group>"; };
 		1EE1A38E287EBA83005C11AA /* StubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAPIClient.swift; sourceTree = "<group>"; };
 		1EE1A390287EBA9E005C11AA /* FixtureLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureLoader.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		1EE1A3D3287EC770005C11AA /* RecipeList */ = {
 			isa = PBXGroup;
 			children = (
+				1ECD4F52287FF2130090630E /* RecipeListRow.swift */,
 			);
 			path = RecipeList;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				1E5FABFE287D563A000C20D9 /* ContentView.swift in Sources */,
 				1EE1A3C9287EC10E005C11AA /* ProcessInfo+Extension.swift in Sources */,
 				1EE1A3CB287EC4A3005C11AA /* RemoteImage.swift in Sources */,
+				1ECD4F53287FF2130090630E /* RecipeListRow.swift in Sources */,
 				1E36D5D628928111009DD683 /* AddHashtagsButton.swift in Sources */,
 				1EE1A38F287EBA83005C11AA /* StubAPIClient.swift in Sources */,
 				1EF732F2287EBA1E00C3AE1D /* GetRecipeDetailRequest.swift in Sources */,
