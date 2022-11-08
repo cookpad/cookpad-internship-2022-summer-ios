@@ -1,19 +1,17 @@
 import SwiftUI
 
 struct RecipeListView: View {
-    @State private var items: [RecipeListItem] = []
+    @StateObject private var viewModel = RecipeListViewModel()
 
     var body: some View {
-        List(items) { item in
+        List(viewModel.items) { item in
             NavigationLink(destination: Text("レシピ詳細 id:\(item.recipe.id)")) {
                 RecipeListRow(item: item)
             }
         }
         .listStyle(PlainListStyle())
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                items = RecipeListSampleDataProvider.makeRecipeListSampleData()
-            }
+        .task {
+            await viewModel.request()
         }
         .navigationTitle("レシピ一覧")
     }
