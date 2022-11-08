@@ -5,6 +5,7 @@ struct RecipeListRow: View {
     var body: some View {
         HStack(alignment: .top, spacing: 8) {
             RemoteImage(urlString: item.recipe.imageUrl)
+                .scaledToFill() // 追加課題: 画像の縦横比を維持(cornerRadiusは表示領域で切り取った上で角丸を付けるのでclippedは不要)
                 .frame(width: 100, height: 100)
                 .cornerRadius(4)
             VStack(alignment: .leading, spacing: 6) {

@@ -5,7 +5,8 @@ struct RecipeListView: View {
 
     var body: some View {
         List(viewModel.items) { item in
-            NavigationLink(destination: Text("レシピ詳細 id:\(item.recipe.id)")) {
+            // レシピ詳細画面に遷移
+            NavigationLink(destination: RecipeDetailView(recipeId: item.recipe.id)) {
                 RecipeListRow(item: item)
             }
         }

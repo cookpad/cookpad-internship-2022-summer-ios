@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E2A22F028869262001E8677 /* RecipeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A22EF28869262001E8677 /* RecipeListViewModel.swift */; };
-		1E534C95288175C100592271 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E534C94288175C100592271 /* RecipeListView.swift */; };
 		1E09DEC8289268BD005CC56A /* PostRecipeHashtagsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09DEC7289268BD005CC56A /* PostRecipeHashtagsRequest.swift */; };
 		1E09DECA28926987005CC56A /* post_recipe_hashtags.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E09DEC928926987005CC56A /* post_recipe_hashtags.json */; };
+		1E2A22F028869262001E8677 /* RecipeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A22EF28869262001E8677 /* RecipeListViewModel.swift */; };
 		1E36D5D428927D05009DD683 /* AddRecipeHashtagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36D5D328927D05009DD683 /* AddRecipeHashtagsView.swift */; };
 		1E36D5D628928111009DD683 /* AddHashtagsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36D5D528928111009DD683 /* AddHashtagsButton.swift */; };
+		1E4163BB28A0AF5E0065D8F7 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4163BA28A0AF5E0065D8F7 /* RecipeDetailView.swift */; };
+		1E4163BD28A0AF730065D8F7 /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4163BC28A0AF730065D8F7 /* RecipeDetailViewModel.swift */; };
+		1E534C95288175C100592271 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E534C94288175C100592271 /* RecipeListView.swift */; };
 		1E5FABFC287D563A000C20D9 /* MiniCookpadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5FABFB287D563A000C20D9 /* MiniCookpadApp.swift */; };
 		1E5FABFE287D563A000C20D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5FABFD287D563A000C20D9 /* ContentView.swift */; };
 		1E5FAC00287D563A000C20D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E5FABFF287D563A000C20D9 /* Assets.xcassets */; };
@@ -20,8 +22,8 @@
 		1E5FAC0D287D563A000C20D9 /* MiniCookpadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5FAC0C287D563A000C20D9 /* MiniCookpadTests.swift */; };
 		1E5FAC17287D563A000C20D9 /* MiniCookpadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5FAC16287D563A000C20D9 /* MiniCookpadUITests.swift */; };
 		1E5FAC19287D563A000C20D9 /* MiniCookpadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5FAC18287D563A000C20D9 /* MiniCookpadUITestsLaunchTests.swift */; };
-		1ECD4F53287FF2130090630E /* RecipeListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD4F52287FF2130090630E /* RecipeListRow.swift */; };
 		1EC972B9289106C400985624 /* Hashtag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC972B8289106C400985624 /* Hashtag.swift */; };
+		1ECD4F53287FF2130090630E /* RecipeListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD4F52287FF2130090630E /* RecipeListRow.swift */; };
 		1EE1A38F287EBA83005C11AA /* StubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A38E287EBA83005C11AA /* StubAPIClient.swift */; };
 		1EE1A391287EBA9E005C11AA /* FixtureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A390287EBA9E005C11AA /* FixtureLoader.swift */; };
 		1EE1A3C9287EC10E005C11AA /* ProcessInfo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A3C8287EC10E005C11AA /* ProcessInfo+Extension.swift */; };
@@ -61,12 +63,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E2A22EF28869262001E8677 /* RecipeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewModel.swift; sourceTree = "<group>"; };
-		1E534C94288175C100592271 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 		1E09DEC7289268BD005CC56A /* PostRecipeHashtagsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRecipeHashtagsRequest.swift; sourceTree = "<group>"; };
 		1E09DEC928926987005CC56A /* post_recipe_hashtags.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = post_recipe_hashtags.json; sourceTree = "<group>"; };
+		1E2A22EF28869262001E8677 /* RecipeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewModel.swift; sourceTree = "<group>"; };
 		1E36D5D328927D05009DD683 /* AddRecipeHashtagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeHashtagsView.swift; sourceTree = "<group>"; };
 		1E36D5D528928111009DD683 /* AddHashtagsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHashtagsButton.swift; sourceTree = "<group>"; };
+		1E4163BA28A0AF5E0065D8F7 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		1E4163BC28A0AF730065D8F7 /* RecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModel.swift; sourceTree = "<group>"; };
+		1E534C94288175C100592271 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 		1E5FABF8287D563A000C20D9 /* MiniCookpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniCookpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5FABFB287D563A000C20D9 /* MiniCookpadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCookpadApp.swift; sourceTree = "<group>"; };
 		1E5FABFD287D563A000C20D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,8 +81,8 @@
 		1E5FAC12287D563A000C20D9 /* MiniCookpadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniCookpadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5FAC16287D563A000C20D9 /* MiniCookpadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCookpadUITests.swift; sourceTree = "<group>"; };
 		1E5FAC18287D563A000C20D9 /* MiniCookpadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCookpadUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1ECD4F52287FF2130090630E /* RecipeListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListRow.swift; sourceTree = "<group>"; };
 		1EC972B8289106C400985624 /* Hashtag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashtag.swift; sourceTree = "<group>"; };
+		1ECD4F52287FF2130090630E /* RecipeListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListRow.swift; sourceTree = "<group>"; };
 		1EE1A38E287EBA83005C11AA /* StubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAPIClient.swift; sourceTree = "<group>"; };
 		1EE1A390287EBA9E005C11AA /* FixtureLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureLoader.swift; sourceTree = "<group>"; };
 		1EE1A3C8287EC10E005C11AA /* ProcessInfo+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Extension.swift"; sourceTree = "<group>"; };
@@ -258,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				1E36D5D528928111009DD683 /* AddHashtagsButton.swift */,
+				1E4163BA28A0AF5E0065D8F7 /* RecipeDetailView.swift */,
+				1E4163BC28A0AF730065D8F7 /* RecipeDetailViewModel.swift */,
 			);
 			path = RecipeDetail;
 			sourceTree = "<group>";
@@ -452,7 +458,9 @@
 				1EE1A391287EBA9E005C11AA /* FixtureLoader.swift in Sources */,
 				1E5FABFE287D563A000C20D9 /* ContentView.swift in Sources */,
 				1EE1A3C9287EC10E005C11AA /* ProcessInfo+Extension.swift in Sources */,
+				1E4163BD28A0AF730065D8F7 /* RecipeDetailViewModel.swift in Sources */,
 				1EE1A3CB287EC4A3005C11AA /* RemoteImage.swift in Sources */,
+				1E4163BB28A0AF5E0065D8F7 /* RecipeDetailView.swift in Sources */,
 				1ECD4F53287FF2130090630E /* RecipeListRow.swift in Sources */,
 				1E36D5D628928111009DD683 /* AddHashtagsButton.swift in Sources */,
 				1EE1A38F287EBA83005C11AA /* StubAPIClient.swift in Sources */,
