@@ -2,7 +2,10 @@ import SwiftUI
 
 struct AddRecipeHashtagsView: View {
     let item: RecipeDetailItem
+    @Binding var addedHashtags: [Hashtag] // @Bindingを使うことで、AddRecipeHashtagsViewでaddedHashtagsを更新することができる
+    @Environment(\.dismiss) private var dismiss
     @State private var hashtagsText: String = ""
+    @State private var isPostRecipeHashtagsFeedbackAlertPresented = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -33,9 +36,22 @@ struct AddRecipeHashtagsView: View {
             Spacer().frame(height: 60)
 
             Button(action: {
-                // Try: ハッシュタグを追加するPOSTリクエストを送る
-                // Try: POSTリクエストのレスポンスのハッシュタグをRecipeDetailViewに反映する
-                // Try: ボタンタップ時にアラートを表示する
+                Task {
+                    let trimmedText = hashtagsText
+                        .replacingOccurrences(of: "　", with: " ") // 全角スペースを半角スペースに変換
+                        .replacingOccurrences(of: "＃", with: "#") // 全角のハッシュタグ(＃)を半角のハッシュタグ(#)に変換
+                        .trimmingCharacters(in: .whitespacesAndNewlines) // テキストの前後のスペース及び改行を削除
+
+                    do {
+                        // レシピにハッシュタグを追加するPOSTリクエストを送る
+                        // POSTリクエストのレスポンスのハッシュタグでaddedHashtagsを更新する（RecipeDetailViewのハッシュタグ枠に反映される）
+                        addedHashtags = try await apiClient.send(request: PostRecipeHashtagsRequest(recipeId: item.recipe.id, hashtagsText: trimmedText)).hashtags.reversed()
+                        // 「ハッシュタグを追加しました」というアラートを表示する
+                        isPostRecipeHashtagsFeedbackAlertPresented = true
+                    } catch {
+                        print(error)
+                    }
+                }
             }, label: {
                 Text("ハッシュタグを追加する")
                     .fontWeight(.bold)
@@ -49,7 +65,12 @@ struct AddRecipeHashtagsView: View {
         .frame(maxWidth: 320)
         .offset(y: -100)
         .navigationTitle(Text("ハッシュタグ追加"))
-        // Try: アラートを表示して、「OK」を押したらAddRecipeHashtagsViewを閉じる
+        // アラートを表示して、「OK」を押したらAddRecipeHashtagsViewを閉じる
+        .alert("ハッシュタグを追加しました", isPresented: $isPostRecipeHashtagsFeedbackAlertPresented) {
+            Button(action: { dismiss() }, label: {
+                Text("OK")
+            })
+        }
     }
 }
 
@@ -72,6 +93,6 @@ struct AddRecipeHashtagsView_Previews: PreviewProvider {
     )
 
     static var previews: some View {
-        AddRecipeHashtagsView(item: item)
+        AddRecipeHashtagsView(item: item, addedHashtags: .constant([]))
     }
 }

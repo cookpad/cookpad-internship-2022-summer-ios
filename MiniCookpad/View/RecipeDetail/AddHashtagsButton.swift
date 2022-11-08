@@ -2,16 +2,24 @@ import SwiftUI
 
 struct AddHashtagsButton: View {
     let item: RecipeDetailItem
+    @Binding var addedHashtags: [Hashtag]
+    @State private var isAddRecipeHashtagsViewPresented = false
 
     var body: some View {
         Button(action: {
             // Try: ボタンタップ時にAddRecipeHashtagsViewをモーダル表示する
+            isAddRecipeHashtagsViewPresented = true
         }, label: {
             Text("#")
                 .font(.title3)
                 .fontWeight(.bold)
                 .foregroundColor(Color.orange)
         })
+        .sheet(isPresented: $isAddRecipeHashtagsViewPresented) {
+            NavigationView {
+                AddRecipeHashtagsView(item: item, addedHashtags: $addedHashtags)
+            }
+        }
     }
 }
 
@@ -34,6 +42,6 @@ struct AddHashtagsButton_Previews: PreviewProvider {
     )
 
     static var previews: some View {
-        AddHashtagsButton(item: item)
+        AddHashtagsButton(item: item, addedHashtags: .constant([]))
     }
 }

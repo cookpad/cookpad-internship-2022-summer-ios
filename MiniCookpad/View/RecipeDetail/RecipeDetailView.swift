@@ -6,6 +6,7 @@ struct RecipeDetailView: View {
 
     @StateObject private var viewModel = RecipeDetailViewModel()
     let recipeId: Int64
+    @State private var addedHashtags: [Hashtag] = [] // ハッシュタグ追加画面で追加したハッシュタグを保持する
 
     var body: some View {
         ScrollView {
@@ -42,9 +43,10 @@ struct RecipeDetailView: View {
                                 .foregroundColor(.gray)
                         }
 
-                        if !item.hashtags.isEmpty { // ハッシュタグが1つもない場合は枠自体を表示しない
+                        if !(item.hashtags.isEmpty && addedHashtags.isEmpty) { // ハッシュタグが1つもない場合は枠自体を表示しない
                             // ハッシュタグ
-                            Text(item.hashtags.map({ "#\($0.name)" }).joined(separator: "　"))
+                            // addedHashtagsとitem.hashtagsを合わせたものを表示する
+                            Text((addedHashtags + item.hashtags).map({ "#\($0.name)" }).joined(separator: "　"))
                                 .font(.subheadline)
                                 .foregroundColor(.black)
                                 .fontWeight(.bold)
@@ -114,6 +116,13 @@ struct RecipeDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline) // navigationBarのタイトルを小さくする
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                if let item = viewModel.item {
+                    AddHashtagsButton(item: item, addedHashtags: $addedHashtags)
+                }
+            }
+        }
         .task {
             // ViewModelを介してAPIリクエストを行う
             await viewModel.request(recipeId: recipeId)
