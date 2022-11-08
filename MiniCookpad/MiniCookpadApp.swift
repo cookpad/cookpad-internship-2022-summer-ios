@@ -4,7 +4,10 @@ import SwiftUI
 struct MiniCookpadApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                RecipeListView()
+            }
+            .navigationViewStyle(.stack) // AutoLayoutのエラーを回避するため
         }
     }
 }

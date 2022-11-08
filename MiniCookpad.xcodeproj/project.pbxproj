@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E534C95288175C100592271 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E534C94288175C100592271 /* RecipeListView.swift */; };
 		1E09DEC8289268BD005CC56A /* PostRecipeHashtagsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09DEC7289268BD005CC56A /* PostRecipeHashtagsRequest.swift */; };
 		1E09DECA28926987005CC56A /* post_recipe_hashtags.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E09DEC928926987005CC56A /* post_recipe_hashtags.json */; };
 		1E36D5D428927D05009DD683 /* AddRecipeHashtagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36D5D328927D05009DD683 /* AddRecipeHashtagsView.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E534C94288175C100592271 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 		1E09DEC7289268BD005CC56A /* PostRecipeHashtagsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRecipeHashtagsRequest.swift; sourceTree = "<group>"; };
 		1E09DEC928926987005CC56A /* post_recipe_hashtags.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = post_recipe_hashtags.json; sourceTree = "<group>"; };
 		1E36D5D328927D05009DD683 /* AddRecipeHashtagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeHashtagsView.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				1ECD4F52287FF2130090630E /* RecipeListRow.swift */,
+				1E534C94288175C100592271 /* RecipeListView.swift */,
 			);
 			path = RecipeList;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				1EC972B9289106C400985624 /* Hashtag.swift in Sources */,
 				1E36D5D428927D05009DD683 /* AddRecipeHashtagsView.swift in Sources */,
 				1EE1A3CE287EC4ED005C11AA /* Color+Extension.swift in Sources */,
+				1E534C95288175C100592271 /* RecipeListView.swift in Sources */,
 				1EEB8E4228816D5100FDABE5 /* RecipeListSampleDataProvider.swift in Sources */,
 				1E09DEC8289268BD005CC56A /* PostRecipeHashtagsRequest.swift in Sources */,
 				1EFD4BFE287ECC6C00B8EB61 /* RecipeListItem.swift in Sources */,
